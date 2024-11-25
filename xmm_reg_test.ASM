@@ -11,7 +11,7 @@ section '.data' data readable writable   ; xmm0=128bits -> 16bytes
 section '.text' code readable executable
 start:
      mov [I],1
-     mov eax,100
+     mov eax,10000 ;ne va pas plus haut car nombre signé , donc range de -127 à 127
      mov ebx,dword [quatre]
      CVTSI2SD  xmm0,ebx
 
@@ -29,7 +29,10 @@ calculate_pi:
      cmp eax,0
      je second
 
-     add [I],2
+     mov ebp,dword [I]
+     add ebp,2
+     mov dword [I],ebp
+     xor ebp,ebp
 
      mov ebx,dword [quatre]
      CVTSI2SD  xmm0,ebx
