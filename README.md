@@ -1,5 +1,6 @@
 # Pi_approximation_assembly
-A simple program written in fasm that demonstrates how to calculate a PI approximation with the SSE
+A simple program written in fasm that demonstrates how to calculate a PI approximation with the SSE.
+Uses windows api but doesnt display the result with printf , use instead a X32 debugger like OllyDbg to see the result.
 
 The author of this program must be credited if used.
 
